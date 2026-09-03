@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useState } from 'react';
@@ -276,7 +277,7 @@ export default function RiskEngine() {
                         <RechartsTooltip 
                           contentStyle={{ borderRadius: '8px', border: '1px solid #e2e8f0' }}
                           labelStyle={{ fontSize: '11px', color: '#64748b', marginBottom: '4px' }}
-                          formatter={(value: number) => [`${value}%`, `Risk`]}
+                          formatter={(value: any) => [`${value}%`, `Risk`]}
                         />
                         <ReferenceLine x="Compensation (Current)" stroke="#e11d48" strokeDasharray="3 3" />
                         <Line 

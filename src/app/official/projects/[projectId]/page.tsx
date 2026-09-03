@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 "use client";
 
@@ -29,14 +30,14 @@ export default function ProjectDetail() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   
-  const [project, setProject] = useState<unknown>(null);
-  const [risk, setRisk] = useState<unknown>(null);
-  const [trajectory, setTrajectory] = useState<unknown[]>([]);
-  const [dimensions, setDimensions] = useState<unknown>(null);
-  const [gisData, setGisData] = useState<unknown>(null);
+  const [project, setProject] = useState<any>(null);
+  const [risk, setRisk] = useState<any>(null);
+  const [trajectory, setTrajectory] = useState<any[]>([]);
+  const [dimensions, setDimensions] = useState<any>(null);
+  const [gisData, setGisData] = useState<any>(null);
   const [dq, setDq] = useState<DataQuality | null>(null);
   const [cases, setCases] = useState<Case[]>([]);
-  const [interventions, setInterventions] = useState<unknown[]>([]);
+  const [interventions, setInterventions] = useState<any[]>([]);
 
   // Simulation State
   const [isSimulating, setIsSimulating] = useState(false);

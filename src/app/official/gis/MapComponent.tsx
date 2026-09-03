@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useEffect, useState } from 'react';
@@ -70,11 +71,11 @@ export default function MapComponent({
       // Leaflet uses [lat, lng], GeoJSON uses [lng, lat]
       // We must swap coordinates for Polyline/Polygon rendering
       
-      const swapCoords = (coords: unknown[]): unknown[] => {
+      const swapCoords = (coords: any[]): any[] => {
         if (typeof coords[0] === 'number') {
           return [coords[1], coords[0]]; // [lat, lng]
         }
-        return coords.map(c => swapCoords(c as unknown[]));
+        return coords.map(c => swapCoords(c as any[]));
       };
 
       return swapCoords(parsed.coordinates);

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Synthetic data for the District Analytics prototype
 
 export const districtAnalytics = [
