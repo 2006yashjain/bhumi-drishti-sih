@@ -55,21 +55,24 @@ export default function RiskEngine() {
             <li>
               <Link href="/official/risk-engine" className="flex items-center px-3 py-2 bg-emerald-500/10 text-emerald-400 rounded-md transition-colors">
                 <Database className="w-5 h-5 mr-3" />
+                <span className="font-medium text-sm">Risk Engine</span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/official/model-data" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors">
+                <Server className="w-5 h-5 mr-3" />
                 <span className="font-medium text-sm">Model & Data</span>
               </Link>
             </li>
             <li><Link href="/official/audit" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors"><Shield className="w-5 h-5 mr-3" /><span className="font-medium text-sm">Audit Trail</span></Link></li>
           </ul>
         </nav>
-
-        <div className="p-4 border-t border-slate-800 bg-slate-900">
-          <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-800">
-            <div className="flex items-center">
-              <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-300 mr-3"><User className="w-4 h-4" /></div>
-              <div className="text-xs"><div className="font-semibold text-white">Guest Administrator</div><div className="text-slate-500">State Administrator</div></div>
-            </div>
-            <button onClick={() => { localStorage.removeItem('access_token'); localStorage.removeItem('user'); router.push('/official/login'); }} className="text-slate-500 hover:text-white transition-colors" title="Logout"><LogOut className="w-4 h-4" /></button>
-          </div>
+        
+        <div className="p-4 border-t border-slate-800 bg-slate-900 mt-auto">
+          <Link href="/" className="flex items-center text-slate-400 hover:text-white transition-colors text-sm font-medium">
+            <LogOut className="w-4 h-4 mr-2" />
+            Sign Out
+          </Link>
         </div>
       </aside>
 

@@ -54,14 +54,13 @@ export default function ModelDataCenter() {
             <li><Link href="/official/gis" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors"><MapIcon className="w-5 h-5 mr-3" /><span className="font-medium text-sm">GIS Intelligence</span></Link></li>
             <li><Link href="/official/district-analytics" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors"><BarChart3 className="w-5 h-5 mr-3" /><span className="font-medium text-sm">District Analytics</span></Link></li>
             <li><Link href="/official/recommendations" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors"><Lightbulb className="w-5 h-5 mr-3" /><span className="font-medium text-sm">Recommendations</span></Link></li>
+            <li><Link href="/official/alerts" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors"><Bell className="w-5 h-5 mr-3" /><span className="font-medium text-sm flex-1">Alerts</span><span className="bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">28</span></Link></li>
             <li>
-              <Link href="/official/alerts" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors">
-                <Bell className="w-5 h-5 mr-3" />
-                <span className="font-medium text-sm flex-1">Alerts</span>
-                <span className="bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">28</span>
+              <Link href="/official/risk-engine" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors">
+                <Database className="w-5 h-5 mr-3" />
+                <span className="font-medium text-sm">Risk Engine</span>
               </Link>
             </li>
-            <li><Link href="/official/risk-engine" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors"><Database className="w-5 h-5 mr-3" /><span className="font-medium text-sm">Risk Engine</span></Link></li>
             <li>
               <Link href="/official/model-data" className="flex items-center px-3 py-2 bg-emerald-500/10 text-emerald-400 rounded-md transition-colors">
                 <Server className="w-5 h-5 mr-3" />
@@ -71,15 +70,12 @@ export default function ModelDataCenter() {
             <li><Link href="/official/audit" className="flex items-center px-3 py-2 hover:bg-slate-800 hover:text-white rounded-md transition-colors"><Shield className="w-5 h-5 mr-3" /><span className="font-medium text-sm">Audit Trail</span></Link></li>
           </ul>
         </nav>
-
-        <div className="p-4 border-t border-slate-800 bg-slate-900">
-          <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-800">
-            <div className="flex items-center">
-              <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-slate-300 mr-3"><User className="w-4 h-4" /></div>
-              <div className="text-xs"><div className="font-semibold text-white">System Admin</div><div className="text-slate-500">Technical Officer</div></div>
-            </div>
-            <button onClick={() => { localStorage.removeItem('access_token'); localStorage.removeItem('user'); router.push('/official/login'); }} className="text-slate-500 hover:text-white transition-colors" title="Logout"><LogOut className="w-4 h-4" /></button>
-          </div>
+        
+        <div className="p-4 border-t border-slate-800 bg-slate-900 mt-auto">
+          <Link href="/" className="flex items-center text-slate-400 hover:text-white transition-colors text-sm font-medium">
+            <LogOut className="w-4 h-4 mr-2" />
+            Sign Out
+          </Link>
         </div>
       </aside>
 
