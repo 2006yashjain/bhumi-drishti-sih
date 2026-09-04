@@ -29,8 +29,7 @@ export default function PublicPortalHome() {
         setIsLoading(true);
         setError(null);
         try {
-          const response = await publicApi.getProjects(searchQuery);
-          const data = await response.json();
+          const data = await publicApi.getProjects(searchQuery) as any;
           setProjects(data);
         } catch (err) {
           console.error("Failed to fetch public projects:", err);

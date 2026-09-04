@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ChevronRight, CheckCircle2, AlertCircle, Search, Upload, Info } from 'lucide-react';
 import { publicProjects } from '../data';
+import { useToast } from '@/components/ui/ToastProvider';
 
 function GrievanceFormContent() {
   const router = useRouter();
@@ -22,6 +23,7 @@ function GrievanceFormContent() {
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [referenceId, setReferenceId] = useState("");
+  const { toast } = useToast();
 
   const selectedProject = projectId ? publicProjects.find(pr => pr.projectId === projectId) : null;
   const projectName = selectedProject?.projectName || "";
@@ -31,7 +33,7 @@ function GrievanceFormContent() {
     e.preventDefault();
     // Deterministic duplicate check simulation
     if (description.includes("test duplicate")) {
-      alert("Possible duplicate grievance detected. For this prototype, we will proceed.");
+      toast("Possible duplicate grievance detected. For this prototype, we will proceed.", "warning" as any);
     }
     
     // Generate deterministic-looking ID

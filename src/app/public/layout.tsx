@@ -56,9 +56,6 @@ export default function PublicLayout({
 
             {/* Right Actions */}
             <div className="hidden md:flex items-center space-x-4">
-              <div className="flex items-center text-xs font-semibold text-slate-500 border border-slate-200 rounded px-2 py-1 cursor-pointer hover:bg-slate-50">
-                <Globe className="w-3.5 h-3.5 mr-1" /> EN / हिन्दी
-              </div>
               <Link 
                 href="/official/login" 
                 className="flex items-center text-xs font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 px-3 py-1.5 rounded transition-colors"

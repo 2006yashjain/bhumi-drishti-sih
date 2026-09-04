@@ -29,10 +29,9 @@ export default function LandingPage() {
             {/* Center/Right Nav */}
             <nav className="hidden md:flex space-x-8 items-center">
               <Link href="/" className="text-sm font-medium text-slate-600 hover:text-slate-900">Home</Link>
-              <Link href="/about" className="text-sm font-medium text-slate-600 hover:text-slate-900">About</Link>
-              <Link href="/#how-it-works" className="text-sm font-medium text-slate-600 hover:text-slate-900">How It Works</Link>
-              <Link href="/public" className="text-sm font-medium text-slate-600 hover:text-slate-900">Public Portal</Link>
-              <Link href="/official/login" className="text-sm font-medium text-slate-600 hover:text-slate-900">Official Portal</Link>
+              <Link href="/about" target="_blank" className="text-sm font-medium text-slate-600 hover:text-slate-900">About</Link>
+              <Link href="/how-it-works" target="_blank" className="text-sm font-medium text-slate-600 hover:text-slate-900">How It Works</Link>
+              <Link href="/public" target="_blank" className="text-sm font-medium text-slate-600 hover:text-slate-900">Public Portal</Link>
             </nav>
 
             {/* Right CTA */}
@@ -72,16 +71,10 @@ export default function LandingPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   href="/public" 
+                  target="_blank"
                   className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-slate-900 bg-white hover:bg-slate-50 transition-colors shadow-sm"
                 >
                   Explore Public Portal
-                </Link>
-                <Link 
-                  href="/official/login" 
-                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-700 hover:bg-emerald-600 transition-colors shadow-sm"
-                >
-                  <Lock className="w-5 h-5 mr-2" />
-                  Official Login
                 </Link>
               </div>
             </div>
@@ -264,16 +257,10 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link 
                 href="/public" 
+                target="_blank"
                 className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-white bg-slate-800 hover:bg-slate-700 transition-colors shadow-sm"
               >
                 Explore Public Portal
-              </Link>
-              <Link 
-                href="/official/login" 
-                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-slate-900 bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-sm"
-              >
-                <Lock className="w-5 h-5 mr-2" />
-                Official Login
               </Link>
             </div>
           </div>
@@ -291,11 +278,10 @@ export default function LandingPage() {
             
             <div className="flex flex-wrap justify-center gap-6">
               <Link href="/" className="text-sm text-slate-600 hover:text-slate-900">Home</Link>
-              <Link href="/about" className="text-sm text-slate-600 hover:text-slate-900">About</Link>
-              <Link href="/public" className="text-sm text-slate-600 hover:text-slate-900">Public Portal</Link>
-              <Link href="/official/login" className="text-sm text-slate-600 hover:text-slate-900">Official Portal</Link>
-              <Link href="/privacy" className="text-sm text-slate-600 hover:text-slate-900">Privacy</Link>
-              <Link href="/accessibility" className="text-sm text-slate-600 hover:text-slate-900">Accessibility</Link>
+              <Link href="/about" target="_blank" className="text-sm text-slate-600 hover:text-slate-900">About</Link>
+              <Link href="/public" target="_blank" className="text-sm text-slate-600 hover:text-slate-900">Public Portal</Link>
+              <Link href="/privacy" target="_blank" className="text-sm text-slate-600 hover:text-slate-900">Privacy</Link>
+              <Link href="/accessibility" target="_blank" className="text-sm text-slate-600 hover:text-slate-900">Accessibility</Link>
             </div>
           </div>
           
