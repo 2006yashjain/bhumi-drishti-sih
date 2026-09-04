@@ -39,13 +39,12 @@ export default function ProjectPortfolio() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await projectsApi.getProjects({
+      const data = await projectsApi.getProjects({
         search: searchQuery,
         state: stateFilter,
         district: districtFilter,
         stage: stageFilter
-      });
-      const data = await response.json();
+      }) as any;
       setProjects(data);
     } catch (err: unknown) {
       console.error("Failed to fetch projects:", err);
